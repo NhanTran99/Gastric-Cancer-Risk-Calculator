@@ -1,6 +1,11 @@
 import { FlaskConical } from "lucide-react";
 
-export function AppHeader() {
+interface Props {
+  /** Subtitle changes per active tab - see App.tsx for the two values used. */
+  subtitle: string;
+}
+
+export function AppHeader({ subtitle }: Props) {
   return (
     <header className="bg-[#0A2540] px-6 py-3.5 flex items-center justify-between shrink-0">
       <div className="flex items-center gap-3">
@@ -9,10 +14,12 @@ export function AppHeader() {
         </div>
         <div>
           <p className="text-white text-[13px] font-semibold tracking-wide leading-none">
-            Gastric Cancer Distant Metastasis Risk Calculator
+            Gastric Cancer Risk Calculator
           </p>
-          <p className="text-white/45 text-[11px] mt-1 leading-none">
-            Research software translating a clinical oncology study into an interactive risk prediction tool
+          {/* Subtitle is the primary signal that the two tabs do different
+              things — it changes every time the active tab changes. */}
+          <p className="text-white/45 text-[11px] mt-1 leading-none transition-opacity duration-150">
+            {subtitle}
           </p>
         </div>
       </div>

@@ -6,6 +6,13 @@ import { SurvivalLayout } from "./components/survival/SurvivalLayout";
 import { useNomogram } from "./hooks/useNomogram";
 import { useSurvival } from "./hooks/useSurvival";
 
+// One subtitle per tab - this is the primary signal (Recommendation A)
+// that the header itself changes to reflect which tool is active.
+const SUBTITLE: Record<AppTab, string> = {
+  diagnosis: "Estimating distant metastasis risk at diagnosis",
+  prognosis: "Predicting overall survival from routine biomarkers",
+};
+
 export default function App() {
   const [tab, setTab] = useState<AppTab>("diagnosis");
 
@@ -31,7 +38,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen overflow-y-auto">
-      <AppHeader />
+      <AppHeader subtitle={SUBTITLE[tab]} />
       <TabSwitcher active={tab} onChange={setTab} />
 
       {tab === "diagnosis" ? (
