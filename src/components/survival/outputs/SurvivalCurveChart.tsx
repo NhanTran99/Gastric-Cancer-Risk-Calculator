@@ -38,7 +38,10 @@ export function SurvivalCurveChart({ curve, riskBand, isValid }: Props) {
               tickFormatter={(v) => `${(v * 100).toFixed(0)}%`}
               tick={{ fontSize: 11, fill: "#94a3b8" }}
             />
-            <Tooltip formatter={(v: number) => `${(v * 100).toFixed(1)}%`} labelFormatter={(l) => `Month ${l}`} />
+            <Tooltip
+              formatter={(v) => (typeof v === "number" ? `${(v * 100).toFixed(1)}%` : v)}
+              labelFormatter={(l) => `Month ${l}`}
+            />
             <ReferenceLine x={12} stroke="#cbd5e1" strokeDasharray="2 2" />
             <ReferenceLine x={24} stroke="#cbd5e1" strokeDasharray="2 2" />
             <Line type="monotone" dataKey="survival" stroke={color} strokeWidth={2.5} dot={false} />
