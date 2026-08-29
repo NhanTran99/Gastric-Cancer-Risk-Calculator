@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "capture-baseline": "tsx scripts/capture-baseline.ts"
   },
   "dependencies": {
     "jspdf": "^4.2.1",
@@ -16,14 +18,17 @@
     "recharts": "^3.10.1"
   },
   "devDependencies": {
+    "@types/node": "^26.4.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
+    "tsx": "^4.19.0",
     "typescript": "^5.4.5",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vitest": "^3.0.0"
   },
   "engines": {
     "node": ">=18.0.0",
