@@ -1,0 +1,1645 @@
+{
+  "capturedAt": "2026-08-29T05:26:39.806Z",
+  "capturedBy": "HUMAN LOCAL EXECUTION via scripts/capture-baseline.ts — not Claude",
+  "engineSource": {
+    "diagnostic": "src/utils/calculator.ts::calculateRisk (unmodified)",
+    "survival": "src/utils/survivalCalculator.ts::calculateSurvival (unmodified)"
+  },
+  "diagnostic": [
+    {
+      "input": {
+        "tumorLocation": "single",
+        "nlr": 3.7,
+        "plr": 168
+      },
+      "output": {
+        "logit": 0.3724188052000002,
+        "probability": 0.5920433174914853,
+        "probabilityPercent": "59.20%",
+        "category": "high",
+        "contributions": [
+          {
+            "label": "Tumor Location",
+            "coefficient": -1.848042629,
+            "value": 1,
+            "rawContribution": 1.848042629,
+            "percentContribution": 42.94897799919216
+          },
+          {
+            "label": "NLR",
+            "coefficient": 0.548241496,
+            "value": 3.7,
+            "rawContribution": 2.0284935352000004,
+            "percentContribution": 47.142702688601425
+          },
+          {
+            "label": "PLR",
+            "coefficient": 0.002537756,
+            "value": 168,
+            "rawContribution": 0.42634300799999997,
+            "percentContribution": 9.908319312206409
+          }
+        ],
+        "isValid": true
+      }
+    },
+    {
+      "input": {
+        "tumorLocation": "multiple",
+        "nlr": 2,
+        "plr": 100
+      },
+      "output": {
+        "logit": 1.1158834830000002,
+        "probability": 0.7532243467076682,
+        "probabilityPercent": "75.32%",
+        "category": "high",
+        "contributions": [
+          {
+            "label": "Tumor Location",
+            "coefficient": -1.848042629,
+            "value": 0,
+            "rawContribution": 0,
+            "percentContribution": 0
+          },
+          {
+            "label": "NLR",
+            "coefficient": 0.548241496,
+            "value": 2,
+            "rawContribution": 1.096482992,
+            "percentContribution": 81.20540750463894
+          },
+          {
+            "label": "PLR",
+            "coefficient": 0.002537756,
+            "value": 100,
+            "rawContribution": 0.2537756,
+            "percentContribution": 18.794592495361066
+          }
+        ],
+        "isValid": true
+      }
+    },
+    {
+      "input": {
+        "tumorLocation": "single",
+        "nlr": 0.5,
+        "plr": 50
+      },
+      "output": {
+        "logit": -1.68140919,
+        "probability": 0.15690895905812302,
+        "probabilityPercent": "15.69%",
+        "category": "low",
+        "contributions": [
+          {
+            "label": "Tumor Location",
+            "coefficient": -1.848042629,
+            "value": 1,
+            "rawContribution": 1.848042629,
+            "percentContribution": 82.16987892045641
+          },
+          {
+            "label": "NLR",
+            "coefficient": 0.548241496,
+            "value": 0.5,
+            "rawContribution": 0.274120748,
+            "percentContribution": 12.188284144145111
+          },
+          {
+            "label": "PLR",
+            "coefficient": 0.002537756,
+            "value": 50,
+            "rawContribution": 0.1268878,
+            "percentContribution": 5.6418369353984685
+          }
+        ],
+        "isValid": true
+      }
+    },
+    {
+      "input": {
+        "tumorLocation": "multiple",
+        "nlr": 8,
+        "plr": 400
+      },
+      "output": {
+        "logit": 5.166659259,
+        "probability": 0.9943287552139739,
+        "probabilityPercent": "99.43%",
+        "category": "high",
+        "contributions": [
+          {
+            "label": "Tumor Location",
+            "coefficient": -1.848042629,
+            "value": 0,
+            "rawContribution": 0,
+            "percentContribution": 0
+          },
+          {
+            "label": "NLR",
+            "coefficient": 0.548241496,
+            "value": 8,
+            "rawContribution": 4.385931968,
+            "percentContribution": 81.20540750463894
+          },
+          {
+            "label": "PLR",
+            "coefficient": 0.002537756,
+            "value": 400,
+            "rawContribution": 1.0151024,
+            "percentContribution": 18.794592495361066
+          }
+        ],
+        "isValid": true
+      }
+    }
+  ],
+  "survival": [
+    {
+      "input": {
+        "age": 60,
+        "m1": 0,
+        "gradeHigh": 0,
+        "nlr": 2.5,
+        "plr": 180
+      },
+      "output": {
+        "linearPredictor": -0.8332177171568429,
+        "hazardRatio": 0.43464845799502627,
+        "risk12": 0.14408241823934287,
+        "risk24": 0.28144004164306413,
+        "survivalCurve": [
+          {
+            "month": 0,
+            "survival": 0.9972742700944006
+          },
+          {
+            "month": 1,
+            "survival": 0.9747146707439955
+          },
+          {
+            "month": 2,
+            "survival": 0.9583361522022507
+          },
+          {
+            "month": 3,
+            "survival": 0.9464852663721499
+          },
+          {
+            "month": 4,
+            "survival": 0.9338064965534899
+          },
+          {
+            "month": 5,
+            "survival": 0.919369223324692
+          },
+          {
+            "month": 6,
+            "survival": 0.9130962549541984
+          },
+          {
+            "month": 7,
+            "survival": 0.89330830746775
+          },
+          {
+            "month": 8,
+            "survival": 0.8913777594343367
+          },
+          {
+            "month": 9,
+            "survival": 0.8894518814214293
+          },
+          {
+            "month": 10,
+            "survival": 0.8861740295135401
+          },
+          {
+            "month": 11,
+            "survival": 0.8785117248848832
+          },
+          {
+            "month": 12,
+            "survival": 0.8559175817606571
+          },
+          {
+            "month": 13,
+            "survival": 0.8454578552973349
+          },
+          {
+            "month": 14,
+            "survival": 0.8181249382839266
+          },
+          {
+            "month": 15,
+            "survival": 0.8100997844416928
+          },
+          {
+            "month": 16,
+            "survival": 0.795928581938772
+          },
+          {
+            "month": 17,
+            "survival": 0.7852014330875147
+          },
+          {
+            "month": 18,
+            "survival": 0.7768210041877519
+          },
+          {
+            "month": 19,
+            "survival": 0.7692941632920294
+          },
+          {
+            "month": 20,
+            "survival": 0.7492575562005053
+          },
+          {
+            "month": 21,
+            "survival": 0.740433301125237
+          },
+          {
+            "month": 22,
+            "survival": 0.7338087718949314
+          },
+          {
+            "month": 23,
+            "survival": 0.7261507572850489
+          },
+          {
+            "month": 24,
+            "survival": 0.7185599583569359
+          },
+          {
+            "month": 25,
+            "survival": 0.7107549829077108
+          },
+          {
+            "month": 26,
+            "survival": 0.7040594463934019
+          },
+          {
+            "month": 27,
+            "survival": 0.7012462043654821
+          },
+          {
+            "month": 28,
+            "survival": 0.6984459350874309
+          },
+          {
+            "month": 29,
+            "survival": 0.6956518918961515
+          },
+          {
+            "month": 30,
+            "survival": 0.6893783059459234
+          },
+          {
+            "month": 31,
+            "survival": 0.682886817406087
+          },
+          {
+            "month": 32,
+            "survival": 0.682886817406087
+          },
+          {
+            "month": 33,
+            "survival": 0.67524309124096
+          },
+          {
+            "month": 34,
+            "survival": 0.6718273161108942
+          },
+          {
+            "month": 35,
+            "survival": 0.6582620741176538
+          },
+          {
+            "month": 36,
+            "survival": 0.6483869330714406
+          },
+          {
+            "month": 37,
+            "survival": 0.6483869330714406
+          },
+          {
+            "month": 38,
+            "survival": 0.6483869330714406
+          },
+          {
+            "month": 39,
+            "survival": 0.6483869330714406
+          },
+          {
+            "month": 40,
+            "survival": 0.6483869330714406
+          },
+          {
+            "month": 41,
+            "survival": 0.6424177644224347
+          },
+          {
+            "month": 42,
+            "survival": 0.6295838610948712
+          },
+          {
+            "month": 43,
+            "survival": 0.6295838610948712
+          },
+          {
+            "month": 44,
+            "survival": 0.6129952746841499
+          },
+          {
+            "month": 45,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 46,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 47,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 48,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 49,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 50,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 51,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 52,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 53,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 54,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 55,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 56,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 57,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 58,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 59,
+            "survival": 0.6053761860452093
+          },
+          {
+            "month": 60,
+            "survival": 0.6053761860452093
+          }
+        ],
+        "shapContributions": [
+          {
+            "key": "m1",
+            "label": "Distant metastasis",
+            "value": -0.78287524
+          },
+          {
+            "key": "gradeHigh",
+            "label": "Poor",
+            "value": -0.15788687
+          },
+          {
+            "key": "age",
+            "label": "Age",
+            "value": 0.052044749999999966
+          },
+          {
+            "key": "nlrZ",
+            "label": "NLR",
+            "value": 0.040575094887256205
+          },
+          {
+            "key": "plrZ",
+            "label": "PLR",
+            "value": 0.014924547955900966
+          }
+        ],
+        "riskBand": "lower",
+        "isValid": true
+      }
+    },
+    {
+      "input": {
+        "age": 70,
+        "m1": 1,
+        "gradeHigh": 1,
+        "nlr": 4,
+        "plr": 250
+      },
+      "output": {
+        "linearPredictor": 1.7549536360629452,
+        "hazardRatio": 5.783179604765703,
+        "risk12": 0.8738234092581032,
+        "risk24": 0.987692203089275,
+        "survivalCurve": [
+          {
+            "month": 0,
+            "survival": 0.9643350390025764
+          },
+          {
+            "month": 1,
+            "survival": 0.7112307433635121
+          },
+          {
+            "month": 2,
+            "survival": 0.5676590291537679
+          },
+          {
+            "month": 3,
+            "survival": 0.4810440903708848
+          },
+          {
+            "month": 4,
+            "survival": 0.4020272484608562
+          },
+          {
+            "month": 5,
+            "survival": 0.32675230341397027
+          },
+          {
+            "month": 6,
+            "survival": 0.29830211326574985
+          },
+          {
+            "month": 7,
+            "survival": 0.22287058985423505
+          },
+          {
+            "month": 8,
+            "survival": 0.21654655154549055
+          },
+          {
+            "month": 9,
+            "survival": 0.21040352726476172
+          },
+          {
+            "month": 10,
+            "survival": 0.20031735583224616
+          },
+          {
+            "month": 11,
+            "survival": 0.17845872088687686
+          },
+          {
+            "month": 12,
+            "survival": 0.12617659074189685
+          },
+          {
+            "month": 13,
+            "survival": 0.10713418460564703
+          },
+          {
+            "month": 14,
+            "survival": 0.06918767124058228
+          },
+          {
+            "month": 15,
+            "survival": 0.06068295110473215
+          },
+          {
+            "month": 16,
+            "survival": 0.04798311414526063
+          },
+          {
+            "month": 17,
+            "survival": 0.040057087907992533
+          },
+          {
+            "month": 18,
+            "survival": 0.03472757650575493
+          },
+          {
+            "month": 19,
+            "survival": 0.03050789318641432
+          },
+          {
+            "month": 20,
+            "survival": 0.021474088849817222
+          },
+          {
+            "month": 21,
+            "survival": 0.018342387335906766
+          },
+          {
+            "month": 22,
+            "survival": 0.016275121009649944
+          },
+          {
+            "month": 23,
+            "survival": 0.014154787418812846
+          },
+          {
+            "month": 24,
+            "survival": 0.012307796910725071
+          },
+          {
+            "month": 25,
+            "survival": 0.010643179787927386
+          },
+          {
+            "month": 26,
+            "survival": 0.0093837918961009
+          },
+          {
+            "month": 27,
+            "survival": 0.008896984280018415
+          },
+          {
+            "month": 28,
+            "survival": 0.008435709312799482
+          },
+          {
+            "month": 29,
+            "survival": 0.007997591548370969
+          },
+          {
+            "month": 30,
+            "survival": 0.007089423806117065
+          },
+          {
+            "month": 31,
+            "survival": 0.006250870858367088
+          },
+          {
+            "month": 32,
+            "survival": 0.006250870858367088
+          },
+          {
+            "month": 33,
+            "survival": 0.005381408101441848
+          },
+          {
+            "month": 34,
+            "survival": 0.005030264933148098
+          },
+          {
+            "month": 35,
+            "survival": 0.0038346037854408155
+          },
+          {
+            "month": 36,
+            "survival": 0.0031359997105182237
+          },
+          {
+            "month": 37,
+            "survival": 0.0031359997105182237
+          },
+          {
+            "month": 38,
+            "survival": 0.0031359997105182237
+          },
+          {
+            "month": 39,
+            "survival": 0.0031359997105182237
+          },
+          {
+            "month": 40,
+            "survival": 0.0031359997105182237
+          },
+          {
+            "month": 41,
+            "survival": 0.0027728857598088904
+          },
+          {
+            "month": 42,
+            "survival": 0.002119941556512162
+          },
+          {
+            "month": 43,
+            "survival": 0.002119941556512162
+          },
+          {
+            "month": 44,
+            "survival": 0.0014860319139650283
+          },
+          {
+            "month": 45,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 46,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 47,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 48,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 49,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 50,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 51,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 52,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 53,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 54,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 55,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 56,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 57,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 58,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 59,
+            "survival": 0.0012582178634632868
+          },
+          {
+            "month": 60,
+            "survival": 0.0012582178634632868
+          }
+        ],
+        "shapContributions": [
+          {
+            "key": "m1",
+            "label": "Distant metastasis",
+            "value": 0.86632476
+          },
+          {
+            "key": "nlrZ",
+            "label": "NLR",
+            "value": 0.5604636178160629
+          },
+          {
+            "key": "age",
+            "label": "Age",
+            "value": 0.27704474999999995
+          },
+          {
+            "key": "gradeHigh",
+            "label": "Poor",
+            "value": 0.12121313000000002
+          },
+          {
+            "key": "plrZ",
+            "label": "PLR",
+            "value": -0.07009262175311765
+          }
+        ],
+        "riskBand": "higher",
+        "isValid": true
+      }
+    },
+    {
+      "input": {
+        "age": 45,
+        "m1": 0,
+        "gradeHigh": 0,
+        "nlr": 1.5,
+        "plr": 120
+      },
+      "output": {
+        "linearPredictor": -1.44443820602546,
+        "hazardRatio": 0.23587855449036246,
+        "risk12": 0.08096591101153472,
+        "risk24": 0.16419650637798155,
+        "survivalCurve": [
+          {
+            "month": 0,
+            "survival": 0.9985198556083472
+          },
+          {
+            "month": 1,
+            "survival": 0.9861976263744865
+          },
+          {
+            "month": 2,
+            "survival": 0.9771696474096037
+          },
+          {
+            "month": 3,
+            "survival": 0.9705932672759321
+          },
+          {
+            "month": 4,
+            "survival": 0.9635156388786444
+          },
+          {
+            "month": 5,
+            "survival": 0.9554026371874774
+          },
+          {
+            "month": 6,
+            "survival": 0.9518594085796852
+          },
+          {
+            "month": 7,
+            "survival": 0.9406087774622807
+          },
+          {
+            "month": 8,
+            "survival": 0.9395050715702968
+          },
+          {
+            "month": 9,
+            "survival": 0.9384029458202264
+          },
+          {
+            "month": 10,
+            "survival": 0.9365246110009684
+          },
+          {
+            "month": 11,
+            "survival": 0.932121381640019
+          },
+          {
+            "month": 12,
+            "survival": 0.9190340889884653
+          },
+          {
+            "month": 13,
+            "survival": 0.9129220037278065
+          },
+          {
+            "month": 14,
+            "survival": 0.8967848225608485
+          },
+          {
+            "month": 15,
+            "survival": 0.8920001749097574
+          },
+          {
+            "month": 16,
+            "survival": 0.8834979619335921
+          },
+          {
+            "month": 17,
+            "survival": 0.8770159295607826
+          },
+          {
+            "month": 18,
+            "survival": 0.8719237107894238
+          },
+          {
+            "month": 19,
+            "survival": 0.8673287030737649
+          },
+          {
+            "month": 20,
+            "survival": 0.854995451722132
+          },
+          {
+            "month": 21,
+            "survival": 0.8495160173852586
+          },
+          {
+            "month": 22,
+            "survival": 0.8453828557734482
+          },
+          {
+            "month": 23,
+            "survival": 0.8405835610848714
+          },
+          {
+            "month": 24,
+            "survival": 0.8358034936220184
+          },
+          {
+            "month": 25,
+            "survival": 0.8308644138508602
+          },
+          {
+            "month": 26,
+            "survival": 0.8266075995178953
+          },
+          {
+            "month": 27,
+            "survival": 0.8248135069011754
+          },
+          {
+            "month": 28,
+            "survival": 0.8230244156638075
+          },
+          {
+            "month": 29,
+            "survival": 0.8212360299198426
+          },
+          {
+            "month": 30,
+            "survival": 0.817208481616685
+          },
+          {
+            "month": 31,
+            "survival": 0.8130233584851402
+          },
+          {
+            "month": 32,
+            "survival": 0.8130233584851402
+          },
+          {
+            "month": 33,
+            "survival": 0.8080719824083984
+          },
+          {
+            "month": 34,
+            "survival": 0.8058510631465727
+          },
+          {
+            "month": 35,
+            "survival": 0.7969795991126679
+          },
+          {
+            "month": 36,
+            "survival": 0.7904687128935204
+          },
+          {
+            "month": 37,
+            "survival": 0.7904687128935204
+          },
+          {
+            "month": 38,
+            "survival": 0.7904687128935204
+          },
+          {
+            "month": 39,
+            "survival": 0.7904687128935204
+          },
+          {
+            "month": 40,
+            "survival": 0.7904687128935204
+          },
+          {
+            "month": 41,
+            "survival": 0.7865111124323189
+          },
+          {
+            "month": 42,
+            "survival": 0.7779447759152868
+          },
+          {
+            "month": 43,
+            "survival": 0.7779447759152868
+          },
+          {
+            "month": 44,
+            "survival": 0.7667530420764408
+          },
+          {
+            "month": 45,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 46,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 47,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 48,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 49,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 50,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 51,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 52,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 53,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 54,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 55,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 56,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 57,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 58,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 59,
+            "survival": 0.7615663348222071
+          },
+          {
+            "month": 60,
+            "survival": 0.7615663348222071
+          }
+        ],
+        "shapContributions": [
+          {
+            "key": "m1",
+            "label": "Distant metastasis",
+            "value": -0.78287524
+          },
+          {
+            "key": "nlrZ",
+            "label": "NLR",
+            "value": -0.30601725373194827
+          },
+          {
+            "key": "age",
+            "label": "Age",
+            "value": -0.28545525
+          },
+          {
+            "key": "gradeHigh",
+            "label": "Poor",
+            "value": -0.15788687
+          },
+          {
+            "key": "plrZ",
+            "label": "PLR",
+            "value": 0.08779640770648835
+          }
+        ],
+        "riskBand": "lower",
+        "isValid": true
+      }
+    },
+    {
+      "input": {
+        "age": 80,
+        "m1": 1,
+        "gradeHigh": 1,
+        "nlr": 6,
+        "plr": 350
+      },
+      "output": {
+        "linearPredictor": 2.551685233717042,
+        "hazardRatio": 12.828704942164096,
+        "risk12": 0.9898674146473461,
+        "risk24": 0.9999419920630949,
+        "survivalCurve": [
+          {
+            "month": 0,
+            "survival": 0.9225994444747571
+          },
+          {
+            "month": 1,
+            "survival": 0.4695891677536293
+          },
+          {
+            "month": 2,
+            "survival": 0.28477221682354725
+          },
+          {
+            "month": 3,
+            "survival": 0.19724111669693126
+          },
+          {
+            "month": 4,
+            "survival": 0.1324732913332767
+          },
+          {
+            "month": 5,
+            "survival": 0.08363759341559525
+          },
+          {
+            "month": 6,
+            "survival": 0.06833469392000481
+          },
+          {
+            "month": 7,
+            "survival": 0.035793093801052
+          },
+          {
+            "month": 8,
+            "survival": 0.03357897591189268
+          },
+          {
+            "month": 9,
+            "survival": 0.03150234115142354
+          },
+          {
+            "month": 10,
+            "survival": 0.028249912021175667
+          },
+          {
+            "month": 11,
+            "survival": 0.02186261394488383
+          },
+          {
+            "month": 12,
+            "survival": 0.010132585352653899
+          },
+          {
+            "month": 13,
+            "survival": 0.007048715171685707
+          },
+          {
+            "month": 14,
+            "survival": 0.002672146348062794
+          },
+          {
+            "month": 15,
+            "survival": 0.0019975727093665403
+          },
+          {
+            "month": 16,
+            "survival": 0.001186550903953828
+          },
+          {
+            "month": 17,
+            "survival": 0.0007949745441076274
+          },
+          {
+            "month": 18,
+            "survival": 0.0005791740191641912
+          },
+          {
+            "month": 19,
+            "survival": 0.00043451391801009137
+          },
+          {
+            "month": 20,
+            "survival": 0.00019939844993346184
+          },
+          {
+            "month": 21,
+            "survival": 0.0001405597191884905
+          },
+          {
+            "month": 22,
+            "survival": 0.00010781074232751056
+          },
+          {
+            "month": 23,
+            "survival": 0.0000791021034450903
+          },
+          {
+            "month": 24,
+            "survival": 0.00005800793690518707
+          },
+          {
+            "month": 25,
+            "survival": 0.00004202369457428075
+          },
+          {
+            "month": 26,
+            "survival": 0.00003178116689858273
+          },
+          {
+            "month": 27,
+            "survival": 0.00002823896335498824
+          },
+          {
+            "month": 28,
+            "survival": 0.0000250933961425364
+          },
+          {
+            "month": 29,
+            "survival": 0.000022293528541749218
+          },
+          {
+            "month": 30,
+            "survival": 0.000017063013279923994
+          },
+          {
+            "month": 31,
+            "survival": 0.000012905698325423033
+          },
+          {
+            "month": 32,
+            "survival": 0.000012905698325423033
+          },
+          {
+            "month": 33,
+            "survival": 0.000009257515608655785
+          },
+          {
+            "month": 34,
+            "survival": 0.000007970538026088384
+          },
+          {
+            "month": 35,
+            "survival": 0.00000436534233737031
+          },
+          {
+            "month": 36,
+            "survival": 0.0000027942411858707876
+          },
+          {
+            "month": 37,
+            "survival": 0.0000027942411858707876
+          },
+          {
+            "month": 38,
+            "survival": 0.0000027942411858707876
+          },
+          {
+            "month": 39,
+            "survival": 0.0000027942411858707876
+          },
+          {
+            "month": 40,
+            "survival": 0.0000027942411858707876
+          },
+          {
+            "month": 41,
+            "survival": 0.0000021267190165690578
+          },
+          {
+            "month": 42,
+            "survival": 0.0000011723056489966854
+          },
+          {
+            "month": 43,
+            "survival": 0.0000011723056489966854
+          },
+          {
+            "month": 44,
+            "survival": 5.330523427076044e-7
+          },
+          {
+            "month": 45,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 46,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 47,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 48,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 49,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 50,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 51,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 52,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 53,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 54,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 55,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 56,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 57,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 58,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 59,
+            "survival": 3.6851041411294525e-7
+          },
+          {
+            "month": 60,
+            "survival": 3.6851041411294525e-7
+          }
+        ],
+        "shapContributions": [
+          {
+            "key": "nlrZ",
+            "label": "NLR",
+            "value": 1.253648315054472
+          },
+          {
+            "key": "m1",
+            "label": "Distant metastasis",
+            "value": 0.86632476
+          },
+          {
+            "key": "age",
+            "label": "Age",
+            "value": 0.5020447499999999
+          },
+          {
+            "key": "plrZ",
+            "label": "PLR",
+            "value": -0.19154572133742997
+          },
+          {
+            "key": "gradeHigh",
+            "label": "Poor",
+            "value": 0.12121313000000002
+          }
+        ],
+        "riskBand": "higher",
+        "isValid": true
+      }
+    }
+  ],
+  "adapterFidelity": {
+    "diagnostic": {
+      "equivalentToDirectCaseIndex": 0,
+      "result": {
+        "status": "ok",
+        "result": {
+          "logit": 0.3724188052000002,
+          "probability": 0.5920433174914853,
+          "probabilityPercent": "59.20%",
+          "category": "high",
+          "contributions": [
+            {
+              "label": "Tumor Location",
+              "coefficient": -1.848042629,
+              "value": 1,
+              "rawContribution": 1.848042629,
+              "percentContribution": 42.94897799919216
+            },
+            {
+              "label": "NLR",
+              "coefficient": 0.548241496,
+              "value": 3.7,
+              "rawContribution": 2.0284935352000004,
+              "percentContribution": 47.142702688601425
+            },
+            {
+              "label": "PLR",
+              "coefficient": 0.002537756,
+              "value": 168,
+              "rawContribution": 0.42634300799999997,
+              "percentContribution": 9.908319312206409
+            }
+          ],
+          "isValid": true
+        }
+      }
+    },
+    "survival": {
+      "equivalentToDirectCaseIndex": 0,
+      "result": {
+        "status": "ok",
+        "result": {
+          "linearPredictor": -0.8332177171568429,
+          "hazardRatio": 0.43464845799502627,
+          "risk12": 0.14408241823934287,
+          "risk24": 0.28144004164306413,
+          "survivalCurve": [
+            {
+              "month": 0,
+              "survival": 0.9972742700944006
+            },
+            {
+              "month": 1,
+              "survival": 0.9747146707439955
+            },
+            {
+              "month": 2,
+              "survival": 0.9583361522022507
+            },
+            {
+              "month": 3,
+              "survival": 0.9464852663721499
+            },
+            {
+              "month": 4,
+              "survival": 0.9338064965534899
+            },
+            {
+              "month": 5,
+              "survival": 0.919369223324692
+            },
+            {
+              "month": 6,
+              "survival": 0.9130962549541984
+            },
+            {
+              "month": 7,
+              "survival": 0.89330830746775
+            },
+            {
+              "month": 8,
+              "survival": 0.8913777594343367
+            },
+            {
+              "month": 9,
+              "survival": 0.8894518814214293
+            },
+            {
+              "month": 10,
+              "survival": 0.8861740295135401
+            },
+            {
+              "month": 11,
+              "survival": 0.8785117248848832
+            },
+            {
+              "month": 12,
+              "survival": 0.8559175817606571
+            },
+            {
+              "month": 13,
+              "survival": 0.8454578552973349
+            },
+            {
+              "month": 14,
+              "survival": 0.8181249382839266
+            },
+            {
+              "month": 15,
+              "survival": 0.8100997844416928
+            },
+            {
+              "month": 16,
+              "survival": 0.795928581938772
+            },
+            {
+              "month": 17,
+              "survival": 0.7852014330875147
+            },
+            {
+              "month": 18,
+              "survival": 0.7768210041877519
+            },
+            {
+              "month": 19,
+              "survival": 0.7692941632920294
+            },
+            {
+              "month": 20,
+              "survival": 0.7492575562005053
+            },
+            {
+              "month": 21,
+              "survival": 0.740433301125237
+            },
+            {
+              "month": 22,
+              "survival": 0.7338087718949314
+            },
+            {
+              "month": 23,
+              "survival": 0.7261507572850489
+            },
+            {
+              "month": 24,
+              "survival": 0.7185599583569359
+            },
+            {
+              "month": 25,
+              "survival": 0.7107549829077108
+            },
+            {
+              "month": 26,
+              "survival": 0.7040594463934019
+            },
+            {
+              "month": 27,
+              "survival": 0.7012462043654821
+            },
+            {
+              "month": 28,
+              "survival": 0.6984459350874309
+            },
+            {
+              "month": 29,
+              "survival": 0.6956518918961515
+            },
+            {
+              "month": 30,
+              "survival": 0.6893783059459234
+            },
+            {
+              "month": 31,
+              "survival": 0.682886817406087
+            },
+            {
+              "month": 32,
+              "survival": 0.682886817406087
+            },
+            {
+              "month": 33,
+              "survival": 0.67524309124096
+            },
+            {
+              "month": 34,
+              "survival": 0.6718273161108942
+            },
+            {
+              "month": 35,
+              "survival": 0.6582620741176538
+            },
+            {
+              "month": 36,
+              "survival": 0.6483869330714406
+            },
+            {
+              "month": 37,
+              "survival": 0.6483869330714406
+            },
+            {
+              "month": 38,
+              "survival": 0.6483869330714406
+            },
+            {
+              "month": 39,
+              "survival": 0.6483869330714406
+            },
+            {
+              "month": 40,
+              "survival": 0.6483869330714406
+            },
+            {
+              "month": 41,
+              "survival": 0.6424177644224347
+            },
+            {
+              "month": 42,
+              "survival": 0.6295838610948712
+            },
+            {
+              "month": 43,
+              "survival": 0.6295838610948712
+            },
+            {
+              "month": 44,
+              "survival": 0.6129952746841499
+            },
+            {
+              "month": 45,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 46,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 47,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 48,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 49,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 50,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 51,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 52,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 53,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 54,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 55,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 56,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 57,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 58,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 59,
+              "survival": 0.6053761860452093
+            },
+            {
+              "month": 60,
+              "survival": 0.6053761860452093
+            }
+          ],
+          "shapContributions": [
+            {
+              "key": "m1",
+              "label": "Distant metastasis",
+              "value": -0.78287524
+            },
+            {
+              "key": "gradeHigh",
+              "label": "Poor",
+              "value": -0.15788687
+            },
+            {
+              "key": "age",
+              "label": "Age",
+              "value": 0.052044749999999966
+            },
+            {
+              "key": "nlrZ",
+              "label": "NLR",
+              "value": 0.040575094887256205
+            },
+            {
+              "key": "plrZ",
+              "label": "PLR",
+              "value": 0.014924547955900966
+            }
+          ],
+          "riskBand": "lower",
+          "isValid": true
+        }
+      }
+    }
+  }
+}

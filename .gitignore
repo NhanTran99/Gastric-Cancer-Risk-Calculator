@@ -23,3 +23,14 @@ npm-debug.log*
 
 # Temporary
 *.local
+
+# cohort data must never be committed or bundled into a public build.
+#
+# NOTE (R-05 refinement): the loader fetches from Vite's public/
+# directory at runtime (`fetch("/local-data/cohort/<id>.json")`), so
+# the actual on-disk location is public/local-data/, not a repo-root
+# local-data/. Both patterns are ignored below for safety in case a
+# root-level local-data/ is ever used for a non-served convenience copy.
+public/local-data/
+local-data/
+local-data/cohort/*.json
